@@ -1,0 +1,45 @@
+.Nav{
+  ul{
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+
+      &.primaryStyle{
+        li{
+          margin-right: 1.2rem;
+          a{
+            color: var(--main-color);
+            font-family: interRegular, sans-serif;
+            text-decoration: none;
+            border-bottom:  1px solid rgba(155, 149, 145, 0.5);
+            cursor: pointer;
+            font-size: 1.375rem;
+            &:hover{
+              color: var(--active-color);
+              border-bottom-color: var(--active-color);
+            }
+          }
+        }
+
+      }
+     &.activeStyle{
+    margin-top: 0;
+       margin-bottom: 1.4rem;
+       li{
+         margin-right: 0.875rem;
+         a{
+           color: var(--active-color);
+           font-family: interRegular, sans-serif;
+           text-decoration: none;
+           border-bottom:  1px solid rgba(155, 149, 145, 0.5);
+           cursor: pointer;
+           &:hover{
+             color: var(--active-color);
+             border-bottom-color: var(--active-color);
+           }
+         }
+       }
+
+     }
+  }
+}

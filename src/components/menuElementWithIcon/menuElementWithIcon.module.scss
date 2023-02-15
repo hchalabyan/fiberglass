@@ -1,0 +1,28 @@
+.MenuElementWithIcon{
+  display: flex;
+  align-items: center;
+  margin-right: 1.2rem;
+  .IconWithBudget{
+    position: relative;
+    .Budget{
+      position: absolute;
+      width: 1.5rem;
+      height: 1.3rem;
+      background: rgba(72, 89, 240, 0.99);
+      border: 2px solid rgba(72, 89, 240, 0.2);
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 0.75rem;
+      top: -1rem;
+      right: -1rem;
+    }
+  }
+  p{
+    color: var(--main-color);
+    font-family: interRegular,sans-serif;
+    margin:0 0 0 0.6rem;
+  }
+}
