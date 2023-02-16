@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import classes from "./header.module.scss";
 import Nav from "../nav/nav";
 import LogoIcon from "../iconsSVG/logoIcon";
@@ -10,8 +10,10 @@ import UserIcon from "../iconsSVG/userIcon";
 import VectorIcon from "../iconsSVG/vectorIcon";
 import CartIcon from "../iconsSVG/cartIcon";
 import PhoneIcon from "../iconsSVG/phoneIcon";
+import MobileMenu from "../mobileMenu/mobileMenu";
 
 const Header = () => {
+  const [mobile, setIsMobile] = useState(false);
   let navMenu = [
     { id: 0, item: "Products", navTo: "/products" },
     { id: 1, item: "Resources", navTo: "/resources" },
@@ -60,24 +62,42 @@ const Header = () => {
       height: "1.9rem",
     },
   ];
-
+  const handResize = () => {
+    if (window.innerWidth < 992) {
+      setIsMobile(true);
+    } else if (window.innerWidth > 992) {
+      setIsMobile(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("resize", handResize);
+    return () => {
+      window.removeEventListener("resize", handResize);
+    };
+  });
   return (
     <div className={classes.Header}>
       <div className={classes.LeftSide}>
-        <div className={classes.LogoWithSearch}>
-          <div className={classes.LogoWrapper}>
-            <Link to="/">
-              <LogoIcon />
-            </Link>
-          </div>
-          <div className={classes.SearchBox}>
-            <input type="text" placeholder="Product SKU, Name…" />
-            <div className={classes.SearchIconWrapper}>
-              <SearchIcon />
+        {!mobile ? (
+          <>
+            <div className={classes.LogoWithSearch}>
+              <div className={classes.LogoWrapper}>
+                <Link to="/">
+                  <LogoIcon />
+                </Link>
+              </div>
+              <div className={classes.SearchBox}>
+                <input type="text" placeholder="Product SKU, Name…" />
+                <div className={classes.SearchIconWrapper}>
+                  <SearchIcon />
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <Nav navData={navMenu} mainMenu />
+            <Nav navData={navMenu} mainMenu />
+          </>
+        ) : (
+          <MobileMenu menuItem={navMenu} />
+        )}
       </div>
       <div className={classes.RightSide}>
         <Nav navData={navInfo} />

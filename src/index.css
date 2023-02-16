@@ -2,7 +2,37 @@
 body {
   --main-color: #212121;
   --active-color: #4859F0;
+  padding: 0.75rem 1.5rem 0;
+  box-sizing: border-box;
+  margin: 0;
+  overflow-x: hidden;
+}
+html,#root,body{
   font-size: 16px;
 }
 
-
+@media screen and (max-width: 1200px){
+  html,#root,body{
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 560px){
+  html,#root,body{
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 480px){
+  html,#root,body{
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 375px){
+  html,#root,body{
+    font-size: 9px;
+  }
+}
+@media screen and (max-width: 320px){
+  html,#root,body{
+    font-size: 8px;
+  }
+}
