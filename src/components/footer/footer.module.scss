@@ -1,0 +1,79 @@
+footer{
+  background: var(--main-color);
+  border-radius: 16px 16px 0px 0px;
+  padding: 2.3rem 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .VerticalMenuWrapper{
+    display: flex;
+    column-gap: 7.8rem;
+    justify-content: space-between;
+  }
+  .SubscribeWrapper{
+    max-width: 29.1rem;
+
+    h1{
+      color: #6F6F6F;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .SubscribeForm{
+      position: relative;
+      margin-bottom: 2.9rem;
+      input{
+        width: 100%;
+        border-radius: 11px;
+        background: #1B1B1B;
+        height: 3.5rem;
+        outline: none;
+        border: none;
+        &::placeholder{
+          color: #C4C4C4;
+          font-size: 1rem;
+        }
+      }
+      button{
+        width: 9.1rem;
+        height: 3.1rem;
+        font-size: 1rem;
+        top: 3px;
+        right: 0;
+      }
+    }
+  }
+  .CopyRight{
+    font-size: 1rem;
+    color: #9B9591;
+    font-family: interRegular, sans-serif;
+    text-align: center;
+    margin-top: 1.75rem;
+    width: 100%;
+    flex-basis:100%;
+  }
+}
+@media screen and (max-width: 1350px){
+  footer{
+    .VerticalMenuWrapper{
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 1.2rem;
+
+    }
+  }
+}
+@media screen and (max-width: 1200px){
+  .VerticalMenuWrapper{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    li{
+      text-align: center;
+    }
+  }
+  .SubscribeWrapper{
+    margin: 0 auto;
+    text-align: center;
+  }
+
+}

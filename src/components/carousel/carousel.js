@@ -9,6 +9,7 @@ import img4 from "../../assets/image4.png";
 import img5 from "../../assets/image5.png";
 import img6 from "../../assets/image6.png";
 import NavIcon from "../iconsSVG/navIcon";
+import Button from "../button/button";
 
 const handleDragStart = (e) => e.preventDefault();
 const items = [
@@ -69,28 +70,27 @@ const items = [
 ];
 const responsive = {
   0: { items: 2 },
-  480: { items: 3 },
-  568: { items: 4 },
-  1024: { items: 5, itemsFit: "contain" },
-  1200: { items: 5, itemsFit: "contain" },
-  1600: { items: 6, itemsFit: "contain" },
+  420: { items: 3 },
+  640: { items: 4 },
+  1024: { items: 5 },
+  1200: { items: 5 },
+  1600: { items: 6 },
 };
 const Carousel = () => {
   return (
     <>
       <div className={classes.Categories}>
         <p>Categories</p>
-        <button>
+        <Button>
           Live Chat <NavIcon width="1.6rem" height="1.75rem" />
-        </button>
+        </Button>
       </div>
       <AliceCarousel
-        mouseTracking
         items={items}
         responsive={responsive}
-        controlsStrategy="alternate"
+        controlsStrategy="default"
         disableDotsControls
-        paddingLeft="2.6rem"
+        infinite
       />
     </>
   );

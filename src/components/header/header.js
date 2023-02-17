@@ -11,6 +11,7 @@ import VectorIcon from "../iconsSVG/vectorIcon";
 import CartIcon from "../iconsSVG/cartIcon";
 import PhoneIcon from "../iconsSVG/phoneIcon";
 import MobileMenu from "../mobileMenu/mobileMenu";
+import ContactInformation from "../contactInformation/contactInformation";
 
 const Header = () => {
   const [mobile, setIsMobile] = useState(false);
@@ -115,12 +116,13 @@ const Header = () => {
             );
           })}
         </div>
-        <div className={classes.ContactInformation}>
-          <div className={classes.PhoneIconWrapper}>
-            <PhoneIcon />
-          </div>
-          <span>+(844) 434-672</span>
-        </div>
+        <ContactInformation header />
+        {/*<div className={classes.ContactInformation}>*/}
+        {/*  <div className={classes.PhoneIconWrapper}>*/}
+        {/*    <PhoneIcon />*/}
+        {/*  </div>*/}
+        {/*  <span>+(844) 434-672</span>*/}
+        {/*</div>*/}
       </div>
     </div>
   );

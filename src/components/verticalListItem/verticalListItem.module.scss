@@ -1,0 +1,18 @@
+.VerticalListItem{
+  h1{
+    color: #6F6F6F;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-family: interBold,sans-serif;
+    margin-bottom: 1.4rem;
+  }
+  ul{
+    padding: 0;
+    li{
+      list-style-type: none;
+      font-family: interRegular,sans-serif;
+      color: white;
+      padding-bottom: 5px;
+    }
+  }
+}

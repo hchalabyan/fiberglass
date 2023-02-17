@@ -5,10 +5,7 @@ const MenuElementWithIcon = (props) => {
   return (
     <div className={classes.MenuElementWithIcon}>
       <div className={classes.IconWithBudget}>
-        <div
-          className={classes.IconWrapper}
-          style={{ width: props.width, height: props.height }}
-        >
+        <div style={{ width: props.width, height: props.height }}>
           {props.icon}
         </div>
         {props.isBudget ? <div className={classes.Budget}>32</div> : null}
