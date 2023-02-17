@@ -9,9 +9,9 @@ import DocumentIcon from "../iconsSVG/documentIcon";
 import UserIcon from "../iconsSVG/userIcon";
 import VectorIcon from "../iconsSVG/vectorIcon";
 import CartIcon from "../iconsSVG/cartIcon";
-import PhoneIcon from "../iconsSVG/phoneIcon";
 import MobileMenu from "../mobileMenu/mobileMenu";
 import ContactInformation from "../contactInformation/contactInformation";
+import DropdownMenu from "../dropdownMenu/dropdownMenu";
 
 const Header = () => {
   const [mobile, setIsMobile] = useState(false);
@@ -35,32 +35,32 @@ const Header = () => {
       icon: <DocumentIcon />,
       title: "Lists",
       isBudget: false,
-      width: "1.5rem",
-      height: "1.8rem",
+      width: `${mobile ? "2.5rem" : "1.5rem"}`,
+      height: `${mobile ? " 2.8rem" : "1.8rem"}`,
     },
     {
       id: 1,
       icon: <UserIcon />,
       title: "Account",
       isBudget: false,
-      width: "1.9rem",
-      height: "1.9rem",
+      width: `${mobile ? "2.9rem" : "1.9rem"}`,
+      height: `${mobile ? "2.9rem" : "1.9rem"}`,
     },
     {
       id: 2,
       icon: <VectorIcon />,
       title: "Quick Order",
       isBudget: false,
-      width: "1.1rem",
-      height: "1.7rem",
+      width: `${mobile ? "2.1rem" : "1.1rem"}`,
+      height: `${mobile ? "2.7rem" : "1.7rem"}`,
     },
     {
       id: 3,
       icon: <CartIcon />,
       title: "Cart",
       isBudget: true,
-      width: "1.9rem",
-      height: "1.9rem",
+      width: `${mobile ? "2.9rem" : "1.9rem"}`,
+      height: `${mobile ? "2.9rem" : "1.9rem"}`,
     },
   ];
   const handResize = () => {
@@ -102,27 +102,44 @@ const Header = () => {
       </div>
       <div className={classes.RightSide}>
         <Nav navData={navInfo} />
-        <div className={classes.UserInformation}>
-          {userInfo.map((elem) => {
-            return (
-              <MenuElementWithIcon
-                key={elem.id}
-                icon={elem.icon}
-                title={elem.title}
-                isBudget={elem.isBudget}
-                width={elem.width}
-                height={elem.height}
-              />
-            );
-          })}
+        {!mobile ? (
+          <div className={classes.UserInformation}>
+            {userInfo.map((elem) => {
+              return (
+                <MenuElementWithIcon
+                  key={elem.id}
+                  icon={elem.icon}
+                  title={elem.title}
+                  isBudget={elem.isBudget}
+                  width={elem.width}
+                  height={elem.height}
+                />
+              );
+            })}
+          </div>
+        ) : null}
+        <div className={classes.UserMobileMenu}>
+          <ContactInformation header />
+          {mobile ? (
+            <DropdownMenu>
+              <div className={classes.MobileUserMenu}>
+                {userInfo.map((elem) => {
+                  return (
+                    <MenuElementWithIcon
+                      key={elem.id}
+                      icon={elem.icon}
+                      title={elem.title}
+                      isBudget={elem.isBudget}
+                      width={elem.width}
+                      height={elem.height}
+                      mobile
+                    />
+                  );
+                })}
+              </div>
+            </DropdownMenu>
+          ) : null}
         </div>
-        <ContactInformation header />
-        {/*<div className={classes.ContactInformation}>*/}
-        {/*  <div className={classes.PhoneIconWrapper}>*/}
-        {/*    <PhoneIcon />*/}
-        {/*  </div>*/}
-        {/*  <span>+(844) 434-672</span>*/}
-        {/*</div>*/}
       </div>
     </div>
   );

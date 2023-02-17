@@ -13,6 +13,9 @@
       font-family: interRegular,sans-serif;
       color: white;
       padding-bottom: 5px;
+      &:hover{
+        color: var(--active-color);
+      }
     }
   }
 }

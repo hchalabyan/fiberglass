@@ -28,6 +28,7 @@ footer{
         height: 3.5rem;
         outline: none;
         border: none;
+        padding-left: 1.25rem;
         &::placeholder{
           color: #C4C4C4;
           font-size: 1rem;
@@ -62,18 +63,32 @@ footer{
     }
   }
 }
+
 @media screen and (max-width: 1200px){
-  .VerticalMenuWrapper{
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    li{
+  footer{
+    .VerticalMenuWrapper{
+      flex-direction: column;
+      align-items: center;
       text-align: center;
+
+
+      li{
+        text-align: center;
+        font-size: 1.5rem;
+      }
+      h1{
+        font-size: 2rem;
+      }
+
+    }
+    .SubscribeWrapper{
+      margin: 0 auto;
+      text-align: center;
+      h1{
+        font-size: 1.5rem;
+      }
     }
   }
-  .SubscribeWrapper{
-    margin: 0 auto;
-    text-align: center;
-  }
+
 
 }

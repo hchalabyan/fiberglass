@@ -25,4 +25,16 @@
     font-family: interRegular,sans-serif;
     margin:0 0 0 0.6rem;
   }
+  &:hover {
+
+    opacity: 0.8;
+    transition: 0.3s;
+    cursor: pointer;
+    svg path, svg{
+      fill:  var(--active-color);
+    }
+    p{
+      color: var(--active-color);
+    }
+  }
 }

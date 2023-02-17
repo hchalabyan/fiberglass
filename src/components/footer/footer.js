@@ -64,7 +64,7 @@ const Footer = () => {
           latest product updates
         </h1>
         <div className={classes.SubscribeForm}>
-          <input type="text" />
+          <input type="text" placeholder="Your E-mail" />
           <Button>Subscribe</Button>
         </div>
         <img src={Payment} alt="" />

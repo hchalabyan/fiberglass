@@ -55,7 +55,19 @@
       display: flex;
       margin-bottom: 2.2rem;
     }
-
+    .UserMobileMenu{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .MobileUserMenu{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        row-gap: 1.2rem;
+        font-size: 1.5rem;
+      }
+    }
 
   }
 }

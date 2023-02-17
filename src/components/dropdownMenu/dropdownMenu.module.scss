@@ -1,0 +1,30 @@
+.DropdownMenu{
+  position: relative;
+
+  .UserIconWrapper{
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    margin-left: 1.4rem;
+    column-gap: 1rem;
+    svg{
+      fill: var(--active-color);
+      &:nth-child(2){
+        transform: rotate(90deg);
+      }
+    }
+
+  }
+.MenuList{
+  position: absolute;
+  top: 3.4em;
+  right: 0;
+  border: 1px solid #E2E0DF;
+  width: 18rem;
+  z-index: 2;
+  background: white;
+  border-radius: 12px;
+  padding: 1.2rem;
+}
+}
