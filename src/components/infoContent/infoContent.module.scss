@@ -1,0 +1,16 @@
+.InfoContent{
+  height:42rem ;
+  background: url(../../assets/mask.png) no-repeat center, url(../../assets/contentBg.png) no-repeat right;
+  background-size: cover;
+  display: flex;
+  padding-left: 6rem;
+  position: relative;
+  border: 1px solid #E2E0DF;
+  border-radius: 16px;
+  p{
+    font-size: 1.3rem;
+    color: black;
+    font-family: interRegular, sans-serif;
+  }
+
+}

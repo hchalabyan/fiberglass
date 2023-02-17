@@ -1,5 +1,6 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
+
 import Main from "./components/main/main";
 import Header from "./components/header/header";
 import Products from "./components/navElements/products";
@@ -11,7 +12,7 @@ import Support from "./components/navElements/support";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />

@@ -1,0 +1,43 @@
+.Categories{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.875rem;
+  p{
+    font-size: 1.6rem;
+    color: var(--main-color);
+    font-family: interBold,sans-serif;
+    margin-bottom: 0;
+    margin-right: 2.4rem;
+  }
+  button{
+    width: 11.3rem;
+    height: 3.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--active-color);
+    box-shadow: 0 4px 11px rgba(33, 33, 33, 0.35);
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 0 1.5rem;
+    svg{
+      margin-left: 2.375rem;
+    }
+  }
+}
+.CarouselItem{
+  p{
+    font-family: interSemiBold, sans-serif;
+    color: var(--main-color);
+    margin-top: 0.875rem;
+  }
+  img{
+    border: 1px solid #E2E0DF;
+    border-radius: 8px;
+    width: 12.3rem;
+    height: 12.3rem;
+  }
+}
